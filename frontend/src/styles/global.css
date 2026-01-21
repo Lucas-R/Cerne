@@ -1,0 +1,15 @@
+* { 
+    user-select: none;
+}
+
+body {
+    font-family: "Urbanist", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+}
