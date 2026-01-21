@@ -11,9 +11,11 @@ export default function Default({ children }: PrivateProps) {
             <div>
                 <Aside />
             </div>
-            <div className="grow">
+            <div className="grow flex flex-col h-screen overflow-x-scroll">
                 <Upper />
-                { children }
+                <div className="grow p-2">
+                    { children }
+                </div>
             </div>
         </div>
     )

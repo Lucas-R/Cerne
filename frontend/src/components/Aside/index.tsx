@@ -11,17 +11,17 @@ export default function Aside() {
                 <FireIcon className="size-6" />
             </Link>
 
-            <nav className="grow flex flex-col items-center justify-between gap-2 w-12 rounded-sm bg-white py-1">
+            <nav className="grow flex flex-col items-center justify-between gap-2 w-12 rounded-sm bg-white border border-border py-1">
                 <div className="flex flex-col gap-1">
                     <Link 
-                        to="/"
-                        className="flex items-center justify-center w-10 h-10 rounded-sm hover:bg-accent"
+                        to="/social"
+                        className="flex items-center justify-center w-10 h-10 rounded-sm bg-black text-white duration-300 hover:scale-105"
                         >
                         <GlobeAmericasIcon className="size-5" />
                     </Link>
                     <Link 
                         to="/"
-                        className="flex items-center justify-center w-10 h-10 rounded-sm hover:bg-accent"
+                        className="flex items-center justify-center w-10 h-10 rounded-sm hover:bg-black duration-300 hover:text-white hover:scale-105"
                         >
                         <ArrowPathRoundedSquareIcon className="size-5" />
                     </Link>
@@ -29,7 +29,7 @@ export default function Aside() {
                 <div>
                     <Link 
                         to="/"
-                        className="flex items-center justify-center w-10 h-10 rounded-sm hover:bg-accent"
+                        className="flex items-center justify-center w-10 h-10 rounded-sm hover:bg-black duration-300 hover:text-white hover:scale-105"
                         >
                         <Cog6ToothIcon className="size-5" />
                     </Link>

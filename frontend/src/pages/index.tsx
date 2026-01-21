@@ -4,7 +4,7 @@ export const Route = createFileRoute('/')({
     head: () => ({
         meta: [
             {
-                title: "Cerne | Início"
+                title: "Cerne | Entrar"
             }
         ]
     }),
@@ -12,5 +12,7 @@ export const Route = createFileRoute('/')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/"!</div>
+  return (
+    <>Login</>
+  )
 }
