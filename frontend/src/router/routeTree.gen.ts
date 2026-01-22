@@ -11,6 +11,9 @@
 import { Route as rootRouteImport } from './../pages/__root'
 import { Route as IndexRouteImport } from './../pages/index'
 import { Route as SocialIndexRouteImport } from './../pages/social/index'
+import { Route as ProcessosIndexRouteImport } from './../pages/processos/index'
+import { Route as PerfilIndexRouteImport } from './../pages/perfil/index'
+import { Route as ConfiguracoesIndexRouteImport } from './../pages/configuracoes/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,30 +25,63 @@ const SocialIndexRoute = SocialIndexRouteImport.update({
   path: '/social/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProcessosIndexRoute = ProcessosIndexRouteImport.update({
+  id: '/processos/',
+  path: '/processos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerfilIndexRoute = PerfilIndexRouteImport.update({
+  id: '/perfil/',
+  path: '/perfil/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfiguracoesIndexRoute = ConfiguracoesIndexRouteImport.update({
+  id: '/configuracoes/',
+  path: '/configuracoes/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/configuracoes/': typeof ConfiguracoesIndexRoute
+  '/perfil/': typeof PerfilIndexRoute
+  '/processos/': typeof ProcessosIndexRoute
   '/social/': typeof SocialIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/configuracoes': typeof ConfiguracoesIndexRoute
+  '/perfil': typeof PerfilIndexRoute
+  '/processos': typeof ProcessosIndexRoute
   '/social': typeof SocialIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/configuracoes/': typeof ConfiguracoesIndexRoute
+  '/perfil/': typeof PerfilIndexRoute
+  '/processos/': typeof ProcessosIndexRoute
   '/social/': typeof SocialIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/social/'
+  fullPaths: '/' | '/configuracoes/' | '/perfil/' | '/processos/' | '/social/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/social'
-  id: '__root__' | '/' | '/social/'
+  to: '/' | '/configuracoes' | '/perfil' | '/processos' | '/social'
+  id:
+    | '__root__'
+    | '/'
+    | '/configuracoes/'
+    | '/perfil/'
+    | '/processos/'
+    | '/social/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ConfiguracoesIndexRoute: typeof ConfiguracoesIndexRoute
+  PerfilIndexRoute: typeof PerfilIndexRoute
+  ProcessosIndexRoute: typeof ProcessosIndexRoute
   SocialIndexRoute: typeof SocialIndexRoute
 }
 
@@ -65,11 +101,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SocialIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/processos/': {
+      id: '/processos/'
+      path: '/processos'
+      fullPath: '/processos/'
+      preLoaderRoute: typeof ProcessosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/perfil/': {
+      id: '/perfil/'
+      path: '/perfil'
+      fullPath: '/perfil/'
+      preLoaderRoute: typeof PerfilIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/configuracoes/': {
+      id: '/configuracoes/'
+      path: '/configuracoes'
+      fullPath: '/configuracoes/'
+      preLoaderRoute: typeof ConfiguracoesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ConfiguracoesIndexRoute: ConfiguracoesIndexRoute,
+  PerfilIndexRoute: PerfilIndexRoute,
+  ProcessosIndexRoute: ProcessosIndexRoute,
   SocialIndexRoute: SocialIndexRoute,
 }
 export const routeTree = rootRouteImport
