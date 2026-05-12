@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1778259448182,
+      "tag": "0000_colorful_stephen_strange",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1778262655302,
+      "tag": "0001_flimsy_darkstar",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1778263125722,
+      "tag": "0002_exotic_mephistopheles",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1778264059608,
+      "tag": "0003_lying_sir_ram",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1778271576391,
+      "tag": "0004_tense_carnage",
+      "breakpoints": true
+    }
+  ]
+}
