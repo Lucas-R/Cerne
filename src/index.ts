@@ -1,7 +1,5 @@
 import 'dotenv/config';
+import { env } from './config/Env';
 import server from './server';
 
-const PORT = Number(process.env.PORT!);
-const HOST = String(process.env.HOST!);
-
-server.listen(PORT, HOST);
+server.listen(env.PORT, env.HOST);
